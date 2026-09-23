@@ -1,0 +1,89 @@
+/* configuracion general */
+
+*{
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth; 
+}
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;   
+    line-height: 1.6;  /* define interlineado */
+    color: black; 
+    background-color: #8dc5cd;
+    
+}
+
+/* Encabezado */
+header {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #237099;
+    color: white;
+}
+
+/* modificacion de un selector pero solo al h1 del header */
+header h1 {
+    margin: 0;
+    font-size: 52px;
+}
+
+header p {
+    margin-top: 10px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+/* Navegación */
+
+nav {
+    display: flex;
+    justify-content: center; /*  Es para centrar los elementos del nav */
+    gap: 28px; /* Espacio entre los elementos del nav */
+    padding: 20px;
+    background-color: #b0d4e9;
+    border-bottom: 1px solid #000000;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+ 
+/* esto funciona para cuando pase el mouse por encima de los elementos del nav se vea una linea  */
+nav a:hover{
+    text-decoration: underline;
+}
+
+/* Main */
+main{
+    max-width:1350px;
+    margin: 0 auto;
+    background-color: #5097a9;
+}
+
+/* Secciones */
+section {
+    padding: 60px 40px;
+    border-bottom: 1px solid #000000;
+   
+}
+/* Titulos de las secciones */
+section h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 30px;
+}
+
+/* Seccion Inicio. Se deben de nombrar con minusculas y si es necesario separar con guion */
+.seccion-inicio {
+min-height: 400px;
+display: flex;
+justify-content: center; /* es de izquierda a derecha */
+align-items: center; /* es de arriba hacia abajo */
+text-align: center;
+}
