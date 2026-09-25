@@ -5,7 +5,7 @@
 }
 
 html {
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;   /* Hace que las transiciones de desplazamiento se vean sueves en lugar de un salto brusco y rápido */
 }
 body {
     margin: 0;
@@ -87,3 +87,121 @@ justify-content: center; /* es de izquierda a derecha */
 align-items: center; /* es de arriba hacia abajo */
 text-align: center;
 }
+
+
+
+
+
+
+.seccion-contenido{
+    max-width: 700px;
+}
+
+.seccion-contenido h2{
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+
+.seccion-contenido p{
+    font-size:  20px;
+    margin-bottom: 30px;
+}
+
+/* Convertir un enlace en boton  */
+
+.boton,button{
+    display: inline-block;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    font-size: 16px; 
+    cursor: pointer;  /* Esto es para que al poner encima el cursor, pase de ser una flecha a una manita */
+}
+
+.boton:hover,button:hover{
+    background-color: azure;
+    color:#000000;
+
+}
+
+/* Seccion sobre mi */
+
+.sobre-mi-contenido{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
+.sobre-mi-contenido img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* permite hacer una portada en la img */
+    border-radius: 50%;
+
+}
+
+.sobre-mi-contenido p{
+    font-size: 18px;
+}
+
+/* Habilidades */
+
+.lista-habilidades{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.lista-habilidades li{
+padding: 20px 20px;
+background-color: #237099;
+border: 2px solid black;
+border-radius: 5px;
+font-weight: bold;
+
+}
+
+
+/* Mis proyectos */
+.contenedor-proyectos{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+.proyecto{
+    flex: 1;
+    min-width: 250px;
+    padding: 25px;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    background-color: #237099;
+}
+
+.proyecto h3{
+    margin-top: 0;
+    font-size: 22px;
+
+}
+
+.proyecto a{
+    color:#5097a9;
+    font-weight: bold;
+    
+}
+
+
+
+
+
