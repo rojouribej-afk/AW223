@@ -82,21 +82,42 @@
 
         <!-- Seccion de Contacto -->
 
-         <section>
+         <section id="contacto">
             <h2> Contactame</h2>
-            <form action = "">  
-                <div> 
-                    <LABEL FOR = ""> Nombre </LABEL>
-                    <input type = "text">
+            <form >  
+                <div calss = "campo"> 
+                    <LABEL FOR = "nombre"> Nombre </LABEL>
+                    <input 
+                    type = "text"
+                    id="nombre"
+                    name="nombre"
+                    placeholder="Escribe tu nombre">
                 </div>
 
-                  <div> 
-                    <LABEL FOR = ""> Correo </LABEL>
-                    <input type = "text">
+                <div calss = "campo"> 
+                    <LABEL FOR = "email"> Correo electronico </LABEL>
+                    <input 
+                    type = "email"
+                    id="email"
+                    name="email"
+                    placeholder="ejemplo@correo.com">
                 </div>
                   <div> 
-                    <LABEL FOR = ""> Mensaje </LABEL>
-                    <textarea rows = "5"></textarea>
+                <div calss = "campo"> 
+                    <LABEL FOR = "mensaje"> Mensaje </LABEL>
+                    <input 
+                    type = "Mensaje"
+                    id="Mensaje"
+                    name="Mensaje"
+                    rows="5"
+                    placeholder="Escribe tu mensaje">
+                </textarea>
+                </div>
+
+                <button type = "submit">
+                    Enviar mensaje
+                </button>
+
                 </div>
             </form>
          </section> 
