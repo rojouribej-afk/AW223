@@ -318,6 +318,9 @@ form button {
     width: 100%;
 }
 
-
-
+/* Esto fue para poner al centro los botones de cambiar color y tipografia */
+.boton-habilidades {
+    text-align: center;
+    margin-top: 20px;
+}
 

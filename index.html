@@ -10,7 +10,9 @@
     <!-- aqui esta el encabezado -->
     <header>
         <h1>Mi Portafolio</h1>
-        <p>Bienvenido a mi sitio web personal.</p>
+        <p id="mensaje">Bienvenido a mi sitio web personal, ahora con JS</p>
+        <button id ="btncambiar"> Cambiar mensaje </button>
+
     </header>
 
     <!-- aqui comienza la navegación, te reenvia los enlaces, es un hipervínculo -->
@@ -59,6 +61,12 @@
                     <li> MySql </li>
 
                 </ul>
+
+                <div class="boton-habilidades">
+                    <button id="btnColor">Cambiar color</button>
+                    <button id="btnLetra">Cambiar tipografia</button>
+
+                </div>
             </section>
 
     <!-- Seccion de Proyectos -->
@@ -84,7 +92,7 @@
 
          <section id="contacto">
             <h2> Contactame</h2>
-            <form >  
+            <form id="formContacto" novalidate>  
                 <div calss = "campo"> 
                     <LABEL FOR = "nombre"> Nombre </LABEL>
                     <input 
@@ -117,6 +125,7 @@
                 <button type = "submit">
                     Enviar mensaje
                 </button>
+        
 
                 </div>
             </form>
@@ -133,4 +142,5 @@
 </footer>
 
 </body>
+<script src="./Js/Funcionalidad.js"> </script>
 </html>
