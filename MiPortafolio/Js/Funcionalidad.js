@@ -55,7 +55,9 @@ formulario.addEventListener("submit", function (evento) {
         return;
     }
 
-   
+    
     alert("¡Gracias, " + nombre + "! Tus datos fueron enviados correctamente.");
     formulario.reset();
 });
+
+
