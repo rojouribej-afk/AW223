@@ -1,20 +1,19 @@
-/* Buscar los elemtos por su id */
+/* 
 
 let mensaje = document.getElementById("mensaje");
 let boton = document.getElementById("btncambiar");
 
-/* Escuchar el clik del botón */
+
 boton.addEventListener("click", function(){
-    /* Aqui se cambia el texto */
+   
 mensaje.textContent = "Gracias por ver mi portafolio :)"
 })
 
-/* Buscar los elementos */
+
 let cajas = document.querySelectorAll(".lista-habilidades li");
 let btnColor = document.getElementById("btnColor");
 let btnLetra = document.getElementById("btnLetra");
 
-/* Cambiar el color de las cajas */
 btnColor.addEventListener("click", function () {
     cajas.forEach(function (caja) {
         caja.style.backgroundColor = "#0f2741";
@@ -22,7 +21,7 @@ btnColor.addEventListener("click", function () {
     });
 });
 
-/* Cambiar el tipo de letra de las cajas */
+
 btnLetra.addEventListener("click", function () {
     cajas.forEach(function (caja) {
         caja.style.fontFamily = "Georgia, serif";
@@ -60,4 +59,4 @@ formulario.addEventListener("submit", function (evento) {
     formulario.reset();
 });
 
-
+  */
