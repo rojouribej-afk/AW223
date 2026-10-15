@@ -9,7 +9,7 @@ $mensaje = $_POST['txtmensaje'];
 
 /* Aqui se prepara la sentencia  para insertar los datos en la tabla mensaje, eso es código sql */
 
-$sqlInsert = "INSERT INTO mensaje(nombre, correo, mensaje) VALUES (?, ?, ?)";
+$sqlInsert = "INSERT INTO mensajes(Nombre, Correo, Mensaje) VALUES (?, ?, ?)";
 
 
 /* Aqui se prepara el insert ya es una buena práctica para evitar inyecciones SQL */

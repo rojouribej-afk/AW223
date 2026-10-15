@@ -98,7 +98,7 @@
 <form id="formulario" action="guardar_mensaje.php" method="post">
 
 
-                <div calss = "campo"> 
+                <div class = "campo"> 
                     <LABEL FOR = "nombre"> Nombre </LABEL>
                     <input 
                     type = "text"
@@ -107,7 +107,7 @@
                     placeholder="Escribe tu nombre">
                 </div>
 
-                <div calss = "campo"> 
+                <div class = "campo"> 
                     <LABEL FOR = "email"> Correo electronico </LABEL>
                     <input 
                     type = "email"
@@ -118,8 +118,8 @@
                   <div> 
                 <div class = "campo"> 
                     <LABEL FOR = "mensaje"> Mensaje </LABEL>
-                    <input 
-            
+                   
+            <textarea
                     type = "Mensaje"
                     id="Mensaje"
                     name="txtmensaje"
