@@ -49,7 +49,7 @@
                 <td>".$arrMensaje['Correo']."</td>
                 <td>".$arrMensaje['Mensaje']. "</td>
                 <td>".$arrMensaje['timeStaps']."</td>
-                <td> >
+                <td> 
                   <a href='editar.php' class='icono-editar' title='Editar'><i class='bi bi-pencil-square'></i></a>
                   <a href='#' class='icono-borrar' title='Borrar'><i class='bi bi-trash'></i></a>
                 </td>

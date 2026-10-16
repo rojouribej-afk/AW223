@@ -10,8 +10,8 @@ function consultaMensajes(){
         return $rsMsj;
 
     }catch(Exception $e){
-        die('Alfo paso al consultar: ' .$e->getMessage() );
-    }
+        die('Algo paso al consultar: ' .$e->getMessage() );
+    }   
 
 }
 

@@ -324,7 +324,82 @@ form button {
     margin-top: 20px;
 }
 
+/* ===== ZONA ADMINISTRACIÓN ===== */
 
+/* Tarjeta centrada, igual que la del formulario */
+.tarjeta {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* El formulario de editar se queda más angosto */
+.tarjeta-form {
+    max-width: 600px;
+}
+
+/* Contenedor de la tabla: mismo look que los inputs (blanco, borde, esquinas redondeadas) */
+.tabla-contenedor {
+    overflow-x: auto;              /* scroll horizontal en pantallas chicas */
+    background-color: white;
+    border: 1px solid #bbb;
+    border-radius: 8px;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla th,
+.tabla td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    word-break: break-word;        /* evita que un mensaje largo rompa la tabla */
+}
+
+/* Encabezado con el azul de tu paleta */
+.tabla thead th {
+    background-color: #237099;
+    color: white;
+}
+
+/* Filas alternadas y efecto al pasar el mouse */
+.tabla tbody tr:nth-child(even) {
+    background-color: #f2f8fa;
+}
+
+.tabla tbody tr:hover {
+    background-color: #dcecf1;
+}
+
+.tabla tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Columna de opciones centrada y sin saltos de línea */
+.tabla th:last-child,
+.tabla td:last-child {
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Íconos de editar y borrar */
+.icono-editar,
+.icono-borrar {
+    margin: 0 6px;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.icono-editar:hover {
+    color: #237099;
+}
+
+.icono-borrar:hover {
+    color: #b00020;
+}
 
 
 
