@@ -16,7 +16,7 @@
   </header>
 
   <nav>
-    <a href="index.html" title="Volver al portafolio"><i class="bi bi-house"></i></a>
+    <a href="index.php" title="Volver al portafolio"><i class="bi bi-house"></i></a>
   </nav>
 
   <main class="main-admin">
@@ -28,34 +28,35 @@
           <table class="tabla">
             <thead>
               <tr>
-                <th>ID</th>
                 <th>Nombre</th>
                 <th>Correo</th>
                 <th>Mensaje</th>
+                <th>Fecha</th>
                 <th>Opciones</th>
+
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td>1</td>
-                <td>Ana</td>
-                <td>ana@example.com</td>
-                <td>Hola, me interesa tu portafolio.</td>
-                <td class="opciones">
-                  <a href="editar.php" class="icono-editar" title="Editar"><i class="bi bi-pencil-square"></i></a>
-                  <a href="#" class="icono-borrar" title="Borrar"><i class="bi bi-trash"></i></a>
+              <?php
+              require 'consulta_mensajes.php'; /* Aqui se manda a llamar el archivo consulta_mensajes.php para que se ejecute la consulta y se muestren los mensajes en la tabla */
+              $rsMensajes = consultaMensajes(); /* Aqui se manda a llamar la funcion consultaMensajes() que esta en el archivo consulta_mensajes.php para que se ejecute la consulta y se muestren los mensajes en la tabla */
+              
+              while($arrMensaje= mysqli_fetch_array($rsMensajes)){
+          
+
+                  echo "<tr>
+                <td>".$arrMensaje['Nombre']."</td>
+                <td>".$arrMensaje['Correo']."</td>
+                <td>".$arrMensaje['Mensaje']. "</td>
+                <td>".$arrMensaje['timeStaps']."</td>
+                <td> >
+                  <a href='editar.php' class='icono-editar' title='Editar'><i class='bi bi-pencil-square'></i></a>
+                  <a href='#' class='icono-borrar' title='Borrar'><i class='bi bi-trash'></i></a>
                 </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>José</td>
-                <td>jose@example.com</td>
-                <td>Quisiera más información sobre tus proyectos.</td>
-                <td class="opciones">
-                  <a href="editar.php" class="icono-editar" title="Editar"><i class="bi bi-pencil-square"></i></a>
-                  <a href="#" class="icono-borrar" title="Borrar"><i class="bi bi-trash"></i></a>
-                </td>
-              </tr>
+                   </tr>";
+                  }
+
+              ?>
             </tbody>
           </table>
         </div>

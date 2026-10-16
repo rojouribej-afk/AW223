@@ -147,6 +147,7 @@
     
 </footer>
 
+<script src="./Js/Alertinsert.js"> </script>
 </body>
-<script src="./Js/Funcionalidad.js"> </script>
+
 </html>

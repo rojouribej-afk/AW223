@@ -13,7 +13,7 @@
     <p>Mensajes Recibidos</p>
   </header>
     <nav>
-    <a href="index.html" title="Volver al portafolio">  <i class="bi bi-house"></i></a>
+    <a href="index.php" title="Volver al portafolio">  <i class="bi bi-house"></i></a>
     <a href="admin.php" title="Volver a editar"> <i class="bi bi-arrow-clockwise"></i></a>
   </nav>
   

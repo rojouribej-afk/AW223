@@ -21,8 +21,9 @@ $stmt -> bind_param("sss", $nombre, $correo, $mensaje);
 
 /* Esto es para ejecutar la consulta y verificar si se hizo correctamente */
 if($stmt -> execute()){
-echo "Mensaje guardado correctamente";
+    /* Esto es para que te mueva a un archivo despues de mandar los datos a la bd */
+header("Location: index.php?estadophp=exito");
 }else{
-    echo "Error al guardar el mensaje";
+header("Location: index.php?estadophp=error");
 }
 
