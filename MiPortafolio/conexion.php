@@ -1,4 +1,4 @@
-<?pHP
+<?php
 /* Aqui se definen las credenciales de conexión a la base de datos */
 $server = "localhost";
 $usuario = "root";

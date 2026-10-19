@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,24 +23,29 @@
     <section class="seccion-admin">
       <div class="tarjeta tarjeta-form">
         <h2>Editar Mensaje</h2>
-        <form>
+        <form action="editar_mensaje.php" method="POST">
+          <?php
+
+          <input type="hidden" name="id" value="<?php echo $datos['id']; ?>">
+
           <div class="campo">
             <label for="nombre">Nombre</label>
-            <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre">
+            <input type="text" id="nombre" name="nombre" value="<?php echo $datos['Nombre']; ?>">
           </div>
 
           <div class="campo">
             <label for="email">Correo electrónico</label>
-            <input type="email" id="email" name="email" placeholder="ejemplo@correo.com">
+            <input type="email" id="email" name="email" value="<?php echo $datos['Correo']; ?>">
           </div>
 
           <div class="campo">
             <label for="mensaje">Mensaje</label>
-            <textarea id="mensaje" name="mensaje" rows="6"></textarea>
+            <textarea id="mensaje" name="mensaje" rows="6"><?php echo $datos['Mensaje']; ?></textarea>
           </div>
 
           <button type="submit">Actualizar Mensaje</button>
         </form>
+        
       </div>
     </section>
   </main>
