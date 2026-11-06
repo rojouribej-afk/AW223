@@ -41,7 +41,7 @@
            <section>
             <h2>Sobre mi</h2>
             <div class ="sobre-mi-contenido">
-                <img src="" alt="">
+                <img src="cerati.jpg" alt="Gustavo Cerati">
                 <div> 
                     <p>Algo sobre mi imagen de arriba </p>
                     <p>En esta practia estoy aprendiendo HTML y CSS.</p>
@@ -95,7 +95,7 @@
             <h2> Contactame</h2>
 
 
-<form id="formulario" action="guardar_mensaje.php" method="post">
+<form id="formContacto" action="guardar_mensaje.php" method="post">
 
 
                 <div class = "campo"> 
@@ -148,6 +148,7 @@
 </footer>
 
 <script src="./Js/Alertinsert.js"> </script>
+<script src="Js/Funcionalidad.js"></script>
 </body>
 
 </html>

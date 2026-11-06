@@ -1,3 +1,23 @@
+<?php
+require 'conexion.php';
+
+if (!isset($_GET['id'])) {
+    header("Location: admin.php"); /* Verifica si llego el id que seleccioné */
+    exit;
+}
+
+$id = (int) $_GET['id']; /* Convierte el id a entero  */
+
+$stmt = $conexion->prepare("SELECT id, Nombre, Correo, Mensaje FROM mensajes WHERE id = ?"); /* Se prepara la consulta, es la plantilla */
+$stmt->bind_param("i", $id); /* Llena el "hueco" que es el id*/
+$stmt->execute();   /* ejecuta la consulta */
+$datos = $stmt->get_result()->fetch_assoc(); /* se guarda la consulta y lo convierte en arreglo con fetch */
+
+if (!$datos) {
+    echo "Mensaje no encontrado.";
+    exit;   /* Si el id no existe muestra este mensaje */
+}
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,9 +44,9 @@
       <div class="tarjeta tarjeta-form">
         <h2>Editar Mensaje</h2>
         <form action="editar_mensaje.php" method="POST">
-          <?php
+           <!-- Manda al archivo de editar mensaje -->
 
-          <input type="hidden" name="id" value="<?php echo $datos['id']; ?>">
+          <input type="hidden" name="id" value="<?php echo $datos['id']; ?>"> <!-- El value es para rellenar ese espacio con la informcaion de la base de datos -->
 
           <div class="campo">
             <label for="nombre">Nombre</label>

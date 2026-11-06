@@ -36,7 +36,7 @@
 
               </tr>
             </thead>
-            <tbody>
+            <tbody> 
               <?php
               require 'consulta_mensajes.php'; /* Aqui se manda a llamar el archivo consulta_mensajes.php para que se ejecute la consulta y se muestren los mensajes en la tabla */
               $rsMensajes = consultaMensajes(); /* Aqui se manda a llamar la funcion consultaMensajes() que esta en el archivo consulta_mensajes.php para que se ejecute la consulta y se muestren los mensajes en la tabla */
@@ -50,8 +50,8 @@
                 <td>".$arrMensaje['Mensaje']. "</td>
                 <td>".$arrMensaje['timeStaps']."</td>
                 <td> 
-                  <a href='editar.php? id=".$arrMensaje['id']."' class='icono-editar' title='Editar'><i class='bi bi-pencil-square'></i></a>
-                  <a href='eliminar.php? id=".$arrMensaje['id']."' class='icono-borrar' title='Borrar'><i class='bi bi-trash'></i></a>
+                  <a href='editar.php?id=".$arrMensaje['id']."' class='icono-editar' title='Editar'><i class='bi bi-pencil-square'></i></a>
+                  <a href='eliminar.php?id=".$arrMensaje['id']."' class='icono-borrar' title='Borrar' onclick=\"return confirm('¿Estás seguro de que quieres eliminar este mensaje?');\"><i class='bi bi-trash'></i></a>
                 </td>
                    </tr>";
                   }

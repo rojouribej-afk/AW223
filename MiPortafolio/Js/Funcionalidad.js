@@ -1,4 +1,4 @@
-/* 
+
 
 let mensaje = document.getElementById("mensaje");
 let boton = document.getElementById("btncambiar");
@@ -34,29 +34,34 @@ btnLetra.addEventListener("click", function () {
 let formulario = document.getElementById("formContacto");
 let inputNombre = document.getElementById("nombre");
 let inputEmail = document.getElementById("email");
+let inputMensaje = formulario.querySelector('[name="mensaje"]');
 
 formulario.addEventListener("submit", function (evento) {
-    
-    evento.preventDefault();
 
     let nombre = inputNombre.value.trim();
     let email = inputEmail.value.trim();
+    let mensajeTexto = inputMensaje.value.trim();
 
     if (nombre === "") {
+        evento.preventDefault();
         alert("Por favor, escribe tu nombre");
         inputNombre.focus();
         return;
     }
 
     if (email === "") {
+        evento.preventDefault();
         alert("El correo es obligatorio");
         inputEmail.focus();
         return;
     }
 
-    
-    alert("¡Gracias, " + nombre + "! Tus datos fueron enviados correctamente.");
-    formulario.reset();
-});
+    if (mensajeTexto === "") {
+        evento.preventDefault();
+        alert("Por favor, escribe tu mensaje");
+        inputMensaje.focus();
+        return;
+    }
 
-  */
+    // Si llegó aquí, todo está bien: el formulario se envía a guardar_mensaje.php
+});
