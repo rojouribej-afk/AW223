@@ -37,6 +37,43 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </main>
 
 
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Concepto</th>
+                <th> Categoria</th>
+                <th> Monto</th>
+                <th> Fecha </th>
+                <th> Estado</th>
+                <th> Acción</th>
+        
+              
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Filas de datos de equipos -->
+            <?php
+            $resultado = mysqli_query($conexion, "SELECT * FROM gastos");
+            while ($row = mysqli_fetch_assoc($resultado)) {
+                echo "<tr>";
+                echo "<td>" . $row['id'] . "</td>";
+                echo "<td>" . $row['concepto'] . "</td>";
+                echo "<td>" . $row['categoria'] . "</td>";
+                echo "<td>" . $row['monto'] . "</td>";
+                echo "<td>" . $row['fecha'] . "</td>";
+                 echo "<td>" . $row['pagado'] . "</td>";
+
+       
+                echo "</td>";
+            }
+            ?>
+        </tbody>
+    </table>
+</div>
+
+
 
     
 </body>
