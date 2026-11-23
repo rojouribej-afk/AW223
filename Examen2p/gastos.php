@@ -25,23 +25,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <body>
 
 <main class="dos-columnas">
+
+<div>  
+
+<?php
+ $resultado = mysqli_query($conexion, "SELECT monto FROM gastos");
+?>
+</div>
     
     <form class="formulario" action="gastos.php" method="post">
-        <h1>Registrar nuevo gasto</h1>
+      <h1>Registrar nuevo gasto</h1>
+
         <input type="text" name="concepto" placeholder="concepto" aria-label="concepto" required>
         <input type="text" name="monto" placeholder="Monto" aria-label="monto" required>
         <input type="text" name="categoria" placeholder="Categoria" aria-label="Categoria" required>
-        <button type="submit">Registrar</button>
+        <button type="submit" class="botones">Registrar</button>
 
     </form>
 </main>
 
 
 <div>
-    <table>
+    <table class="table">
         <thead>
             <tr>
-                <th>#</th>
+                <th>id</th>
                 <th>Concepto</th>
                 <th> Categoria</th>
                 <th> Monto</th>
@@ -49,7 +57,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <th> Estado</th>
                 <th> Acción</th>
         
-              
             </tr>
         </thead>
         <tbody>
@@ -63,18 +70,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 echo "<td>" . $row['categoria'] . "</td>";
                 echo "<td>" . $row['monto'] . "</td>";
                 echo "<td>" . $row['fecha'] . "</td>";
-                 echo "<td>" . $row['pagado'] . "</td>";
-
-       
+                echo "<td>" . $row['pagado'] . "</td>";
+                
                 echo "</td>";
             }
+            
             ?>
+            <td> <button class="boton"> Marcar pagado </button>  </td>
+            
         </tbody>
     </table>
 </div>
 
 
 
-    
 </body>
 </html>

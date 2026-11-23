@@ -1,0 +1,41 @@
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 420px;
+    max-width: 100%;
+    resize: horizontal;
+}
+table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.botones {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #015ab3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.dos-columnas {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    min-height: 250px;
+}
+
+.boton{
+    background-color: chartreuse;
+    border-radius: 10%;
+    color:aliceblue;
+}
